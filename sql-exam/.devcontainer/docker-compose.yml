@@ -1,24 +1,16 @@
 version: '3.8'
 
 services:
-  # سرویس ۱: محیط کاربری شما
   app:
     image: mcr.microsoft.com/devcontainers/base:ubuntu-22.04
-    
     volumes:
-      # فلگ :Z برای فدورا حیاتی است
       - ../:/workspaces/sql-exam:Z,cached
-    
-    network_mode: service:db 
-    
-    # تنظیمات امنیتی مخصوص پادمن (Podman)
+    network_mode: service:db
     security_opt:
       - label=disable
-    userns_mode: "keep-id"  # <--- این خط حیاتی است تا فایل‌ها قفل نشوند
-      
+    userns_mode: "keep-id"
     command: sleep infinity
 
-  # سرویس ۲: دیتابیس
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sql_exam_db
