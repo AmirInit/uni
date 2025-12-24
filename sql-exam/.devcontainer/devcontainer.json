@@ -1,0 +1,40 @@
+{
+	"name": "SQL Server Exam (Simple)",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/sql-exam",
+
+	// تنظیمات مخصوص فدورا سیلوربلو و پادمن
+	"runArgs": [
+		"--userns=keep-id",          // نگاشت دسترسی‌ها
+		"--security-opt=label=disable" // غیرفعال کردن گیرهای امنیتی SELinux
+	],
+
+	// نکته کلیدی: با کاربر روت وارد شو تا مشکل پرمیشن نداشته باشی
+	"remoteUser": "root",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-mssql.mssql",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-mssql"
+			],
+			"settings": {
+				"mssql.connections": [
+					{
+						"server": "db", 
+						"database": "master",
+						"user": "sa",
+						"password": "ExamPassword!123",
+						"authenticationType": "SqlLogin",
+						"profileName": "Exam DB"
+					}
+				]
+			}
+		}
+	},
+	
+	// نصب ابزارها بعد از بالا آمدن (چون داکر فایل نداریم اینجا انجام میدیم)
+	"postCreateCommand": "apt-get update && apt-get install -y git iputils-ping"
+}
