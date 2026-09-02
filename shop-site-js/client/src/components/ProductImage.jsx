@@ -15,7 +15,7 @@ const hueFor = (text) => {
  * never fires — without this the card would sit on a grey placeholder forever.
  * That is exactly what happens when the demo machine has no internet.
  */
-const LOAD_TIMEOUT_MS = 6000;
+const LOAD_TIMEOUT_MS = 4000;
 
 /**
  * Product image with a graceful fallback.

@@ -38,13 +38,15 @@ export const Button = ({
   ...rest
 }) => {
   const classes = [
-    'relative inline-flex shrink-0 items-center justify-center rounded-xl font-semibold',
+    'relative inline-flex items-center justify-center rounded-xl font-semibold',
     'transition-all duration-200 ease-out select-none',
     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500',
     'disabled:cursor-not-allowed disabled:shadow-none',
     VARIANTS[variant] ?? VARIANTS.primary,
     SIZES[size] ?? SIZES.md,
-    fullWidth ? 'w-full' : '',
+    // A full-width button must stay shrinkable, otherwise it overflows its
+    // container when placed in a flex row next to a sibling.
+    fullWidth ? 'w-full' : 'shrink-0',
     loading ? 'pointer-events-none' : '',
     className,
   ]
