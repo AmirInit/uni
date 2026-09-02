@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#158375" />
+  <!-- Shopping bag body -->
+  <path
+    d="M19 23h26l-2.5 23.4a4.2 4.2 0 0 1-4.18 3.6H25.68a4.2 4.2 0 0 1-4.18-3.6Z"
+    stroke="#fff"
+    stroke-width="3.4"
+    stroke-linejoin="round"
+  />
+  <!-- Handle, in the amber accent so the mark reads as a bag, not a cart -->
+  <path
+    d="M26 23.5v-4a6 6 0 0 1 12 0v4"
+    stroke="#FBBF24"
+    stroke-width="3.4"
+    stroke-linecap="round"
+  />
+</svg>
