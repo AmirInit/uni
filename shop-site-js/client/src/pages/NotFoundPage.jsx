@@ -2,6 +2,7 @@ import { SearchIcon } from '../components/Icons.jsx';
 import Button from '../components/ui/Button.jsx';
 import { toPersianDigits } from '../lib/format.js';
 
+/** Catch-all 404 page for unknown routes. */
 export const NotFoundPage = () => (
   <div className="mx-auto flex max-w-xl flex-col items-center px-4 py-24 text-center sm:px-6">
     <span className="num text-6xl font-extrabold text-brand-200">{toPersianDigits(404)}</span>

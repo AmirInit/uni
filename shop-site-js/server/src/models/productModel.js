@@ -96,10 +96,12 @@ export const update = (id, data) => {
   const params = { id };
 
   for (const [key, column] of Object.entries(columns)) {
-    if (data[key] !== undefined) {
-      assignments.push(`${column} = @${key}`);
-      params[key] = data[key];
-    }
+    if (data[key] === undefined) continue;
+    // The admin form always sends every field, so an untouched "— choose —"
+    // arrives as ''. Falling back keeps the product out of an empty category.
+    if (key === 'category' && !data[key]) continue;
+    assignments.push(`${column} = @${key}`);
+    params[key] = data[key];
   }
   assignments.push(`updated_at = datetime('now')`);
 

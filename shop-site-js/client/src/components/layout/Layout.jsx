@@ -14,6 +14,7 @@ const ScrollToTop = () => {
   return null;
 };
 
+/** App frame shared by every route: navbar, page outlet, footer, cart drawer, toasts. */
 export const Layout = () => (
   <div className="flex min-h-screen flex-col">
     <ScrollToTop />

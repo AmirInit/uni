@@ -230,6 +230,7 @@ const ProductFormModal = ({ open, product, categories, onClose, onSaved }) => {
 
 /* --------------------------------- page ----------------------------------- */
 
+/** Admin catalogue screen: searchable product table with add/edit/delete. */
 export const AdminPage = () => {
   const toast = useToast();
 

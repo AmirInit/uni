@@ -8,6 +8,7 @@ import { useToast } from '../context/ToastContext.jsx';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+/** Sign-up form. A successful registration logs the new user straight in. */
 export const RegisterPage = () => {
   const { register } = useAuth();
   const toast = useToast();

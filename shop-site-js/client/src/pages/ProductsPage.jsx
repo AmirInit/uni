@@ -147,6 +147,7 @@ const Pagination = ({ page, pages, onChange }) => {
   );
 };
 
+/** Storefront home: hero, filters and the paginated product grid. */
 export const ProductsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const toast = useToast();

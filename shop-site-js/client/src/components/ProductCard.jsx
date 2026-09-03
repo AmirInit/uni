@@ -7,6 +7,7 @@ import Spinner from './ui/Spinner.jsx';
 
 const LOW_STOCK_THRESHOLD = 5;
 
+/** Grid tile for one product, with a quick add-to-cart button. */
 export const ProductCard = ({ product }) => {
   const { addItem, pendingIds, quantityOf } = useCart();
   const busy = pendingIds.includes(product.id);

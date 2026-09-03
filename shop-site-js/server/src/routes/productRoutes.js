@@ -9,6 +9,7 @@ import {
 } from '../controllers/productController.js';
 import { adminOnly, protect } from '../middleware/auth.js';
 
+// /api/products — reading is public, writing is admin-only.
 const router = Router();
 
 // Must be declared before `/:id` so "categories" isn't parsed as an id.

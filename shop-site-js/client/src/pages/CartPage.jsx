@@ -62,6 +62,7 @@ const CartRow = ({ line, busy, onQuantityChange, onRemove }) => (
   </li>
 );
 
+/** Full cart page: editable lines plus the order summary and checkout button. */
 export const CartPage = () => {
   const navigate = useNavigate();
   const toast = useToast();

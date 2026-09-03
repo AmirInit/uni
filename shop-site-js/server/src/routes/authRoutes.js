@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { login, me, register } from '../controllers/authController.js';
 import { protect } from '../middleware/auth.js';
 
+// /api/auth — registration, login and "who am I".
 const router = Router();
 
 router.post('/register', register);

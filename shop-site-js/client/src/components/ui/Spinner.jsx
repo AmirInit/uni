@@ -1,3 +1,4 @@
+/** Inline loading spinner used inside buttons and small placeholders. */
 export const Spinner = ({ className = 'h-6 w-6' }) => (
   <svg className={`animate-spin ${className}`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <circle cx="12" cy="12" r="9.5" stroke="currentColor" strokeOpacity="0.22" strokeWidth="2.6" />

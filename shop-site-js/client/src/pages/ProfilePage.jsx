@@ -283,6 +283,7 @@ const OrdersTab = ({ highlightOrderId }) => {
 
 /* --------------------------------- page ---------------------------------- */
 
+/** Account page with two tabs: editable profile details and order history. */
 export const ProfilePage = () => {
   const { user, isAdmin } = useAuth();
   const location = useLocation();

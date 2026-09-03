@@ -38,6 +38,7 @@ const DetailSkeleton = () => (
   </div>
 );
 
+/** Single product page: gallery, stock, quantity picker and add-to-cart. */
 export const ProductDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();

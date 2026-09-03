@@ -133,6 +133,7 @@ const UserMenu = ({ user, isAdmin, onLogout }) => {
   );
 };
 
+/** Sticky top bar: navigation, product search, cart badge and the account menu. */
 export const Navbar = () => {
   const { user, isAuthenticated, isAdmin, logout } = useAuth();
   const { itemsCount, openDrawer } = useCart();

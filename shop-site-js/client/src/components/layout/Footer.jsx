@@ -27,6 +27,7 @@ const LINK_GROUPS = [
   },
 ];
 
+/** Static site footer: service promises, link columns and contact details. */
 export const Footer = () => (
   <footer className="mt-20 border-t border-ink-100 bg-white">
     {/* Service strip */}

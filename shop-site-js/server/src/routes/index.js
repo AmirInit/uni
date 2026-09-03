@@ -5,6 +5,7 @@ import orderRoutes from './orderRoutes.js';
 import productRoutes from './productRoutes.js';
 import userRoutes from './userRoutes.js';
 
+// Mounts every feature router under /api and adds the health check.
 const router = Router();
 
 router.get('/health', (_req, res) => {

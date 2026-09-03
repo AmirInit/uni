@@ -8,6 +8,7 @@ import { useToast } from '../context/ToastContext.jsx';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+/** Sign-in form. On success the guest cart is merged in by CartContext. */
 export const LoginPage = () => {
   const { login } = useAuth();
   const toast = useToast();
